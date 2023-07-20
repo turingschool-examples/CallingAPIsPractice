@@ -27,6 +27,7 @@ class Program
             string responseBody = await response.Content.ReadAsStringAsync();
 
             // Use the Json library to turn the string into an array
+            // Note: If your API request doesn't return an array, you might need to use JObject instead of JArray
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(responseBody);
             Console.WriteLine(jsonResponse[0]["name"]); //CHANGE THE WAY YOU ACCESS THE RESPONSE DATA
         }
