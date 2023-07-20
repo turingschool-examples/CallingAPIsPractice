@@ -10,7 +10,7 @@ class Program
     static async Task Main(string[] args)
     {
         // GitHub API endpoint
-        string apiUrl = "https://api.github.com/orgs/dotnet/repos";
+        string apiUrl = "https://api.github.com/orgs/dotnet/repos"; //CHANGE THIS URL
 
         // Create an instance of HttpClient
         using (HttpClient httpClient = new HttpClient())
@@ -28,7 +28,7 @@ class Program
 
             // Use the Json library to turn the string into an array
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(responseBody);
-            Console.WriteLine(jsonResponse[0]["name"]);
+            Console.WriteLine(jsonResponse[0]["name"]); //CHANGE THE WAY YOU ACCESS THE RESPONSE DATA
         }
     }
 }
